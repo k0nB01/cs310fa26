@@ -1,0 +1,88 @@
+
+ARRAY STACK
+Push: 1 2 3 4 5; pop: 5 4 3
+Top: 2; size: 2
+PASS: LIFO order, top and size
+PASS: empty pop
+PASS: empty top
+PASS: reuse after empty
+
+CIRCULAR LINKED STACK
+Push: 1 2 3 4 5; pop: 5 4 3
+Top: 2; size: 2
+PASS: LIFO order, top and size
+PASS: empty pop
+PASS: empty top
+PASS: reuse after empty
+PASS: initial capacity is 100
+PASS: growth to 250 items preserves order
+PASS: array stack accepts strings
+
+ARRAY QUEUE
+Enqueue: 1 2 3 4 5; dequeue: 1 2 3
+Front: 4; size: 2
+PASS: FIFO order, front and size
+PASS: empty dequeue
+PASS: empty front
+PASS: reuse after empty
+
+CIRCULAR LINKED QUEUE
+Enqueue: 1 2 3 4 5; dequeue: 1 2 3
+Front: 4; size: 2
+PASS: FIFO order, front and size
+PASS: empty dequeue
+PASS: empty front
+PASS: reuse after empty
+PASS: queue full at 100 items
+PASS: queue overflow
+PASS: circular wraparound preserves FIFO order
+PASS: array queue accepts strings
+
+SINGLY LINKED LIST
+After five inserts: 1 2 3 4 5 
+PASS: front and rear insertion
+After deleting front and rear: 2 3 4 
+PASS: front and rear deletion
+PASS: delete final node from rear
+PASS: empty deleteFront
+PASS: empty deleteRear
+PASS: reuse and delete final node from front
+PASS: empty display
+
+CIRCULAR LINKED LIST
+After five inserts: 1 2 3 4 5 
+PASS: front and rear insertion
+After deleting front and rear: 2 3 4 
+PASS: front and rear deletion
+PASS: delete final node from rear
+PASS: empty deleteFront
+PASS: empty deleteRear
+PASS: reuse and delete final node from front
+PASS: empty display
+PASS: circular list accepts strings
+
+TEXT EDITOR: CHARACTERS
+PASS: empty undo
+PASS: empty redo
+Typed ten characters: helloworld
+PASS: ten-character input
+Undo three: hellowo
+PASS: undo three characters
+Redo two: helloworl
+PASS: redo newest undone item first
+PASS: restore original text
+PASS: new typing clears redo
+PASS: new edit stays in buffer
+PASS: undo all items
+PASS: redo all items in order
+PASS: alternating undo and redo
+
+TEXT EDITOR: STRINGS
+Typed strings: hello world!
+PASS: string input
+Undo two, redo one: hello world
+PASS: whole-string undo and redo
+PASS: restore all strings
+
+Results: 52 passed, 0 failed
+
