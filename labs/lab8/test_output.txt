@@ -1,101 +1,83 @@
-LAB 8 - TEMPLATE CIRCULAR SORTED LIST
-
-=== SortedType<int> ===
-[PASS] Constructor: empty list
-[PASS] IsFull: memory available
-[PASS] GetItem: empty list
-[PASS] PrintReverse: empty list
-[PASS] GetNextItem: empty-list exception
-[PASS] DeleteItem / MakeEmpty: empty list
-[PASS] PutItem: empty, tail, head; sorted traversal
+=== int ===
+Empty length: 0 (expected 0)
+IsFull: 0 (expected 0)
+Length after inserts: 3 (expected 3)
 Forward: 10 20 30 
+Expected: 10 20 30
 Reverse: 30 20 10
-[PASS] PrintReverse: exact reversed order
-[PASS] GetNextItem: tail wraps to head
-[PASS] ResetList: restart at head
-30 20 10
-[PASS] PrintReverse preserves traversal position
-[PASS] GetItem: find head, middle, tail
-[PASS] GetItem: missing below, between, above
-[PASS] PutItem: insert between existing nodes
-[PASS] PutItem: duplicate; length is four
-[PASS] DeleteItem: remove just one duplicate
-[PASS] DeleteItem: missing values leave list unchanged
-[PASS] DeleteItem: middle; traversal safely resets
-[PASS] DeleteItem: head
-[PASS] DeleteItem: tail
-[PASS] PrintReverse: singleton
-[PASS] DeleteItem: only node
-[PASS] PutItem: all-equal circular list
-[PASS] DeleteItem: all-equal list stays circular
-[PASS] MakeEmpty: populated list and repeated call
-[PASS] PutItem: reuse after MakeEmpty
-[PASS] Destructor: populated list returns normally
+Expected: 30 20 10
+Find existing item: 1 (expected 1)
+Find missing item: 0 (expected 0)
+After ResetList: 10 (expected 10)
+Wrap to first: 10 (expected 10)
+Insert duplicate, delete one: 10 20 30 
+Expected: 10 20 30
+Delete missing, length: 3 (expected 3)
+Delete middle: 10 30 
+Expected: 10 30
+Delete tail: 10 
+Expected: 10
+Delete head: 30 
+Expected: 30
+Delete only node, length: 0 (expected 0)
+MakeEmpty length: 0 (expected 0)
+Empty reverse (blank line):
 
-=== SortedType<double> ===
-[PASS] Constructor: empty list
-[PASS] IsFull: memory available
-[PASS] GetItem: empty list
-[PASS] PrintReverse: empty list
-[PASS] GetNextItem: empty-list exception
-[PASS] DeleteItem / MakeEmpty: empty list
-[PASS] PutItem: empty, tail, head; sorted traversal
+Reuse after clearing: 30 
+Expected: 30
+
+=== double ===
+Empty length: 0 (expected 0)
+IsFull: 0 (expected 0)
+Length after inserts: 3 (expected 3)
 Forward: 1.5 2.5 3.5 
+Expected: 1.5 2.5 3.5
 Reverse: 3.5 2.5 1.5
-[PASS] PrintReverse: exact reversed order
-[PASS] GetNextItem: tail wraps to head
-[PASS] ResetList: restart at head
-3.5 2.5 1.5
-[PASS] PrintReverse preserves traversal position
-[PASS] GetItem: find head, middle, tail
-[PASS] GetItem: missing below, between, above
-[PASS] PutItem: insert between existing nodes
-[PASS] PutItem: duplicate; length is four
-[PASS] DeleteItem: remove just one duplicate
-[PASS] DeleteItem: missing values leave list unchanged
-[PASS] DeleteItem: middle; traversal safely resets
-[PASS] DeleteItem: head
-[PASS] DeleteItem: tail
-[PASS] PrintReverse: singleton
-[PASS] DeleteItem: only node
-[PASS] PutItem: all-equal circular list
-[PASS] DeleteItem: all-equal list stays circular
-[PASS] MakeEmpty: populated list and repeated call
-[PASS] PutItem: reuse after MakeEmpty
-[PASS] Destructor: populated list returns normally
+Expected: 3.5 2.5 1.5
+Find existing item: 1 (expected 1)
+Find missing item: 0 (expected 0)
+After ResetList: 1.5 (expected 1.5)
+Wrap to first: 1.5 (expected 1.5)
+Insert duplicate, delete one: 1.5 2.5 3.5 
+Expected: 1.5 2.5 3.5
+Delete missing, length: 3 (expected 3)
+Delete middle: 1.5 3.5 
+Expected: 1.5 3.5
+Delete tail: 1.5 
+Expected: 1.5
+Delete head: 3.5 
+Expected: 3.5
+Delete only node, length: 0 (expected 0)
+MakeEmpty length: 0 (expected 0)
+Empty reverse (blank line):
 
-=== SortedType<char> ===
-[PASS] Constructor: empty list
-[PASS] IsFull: memory available
-[PASS] GetItem: empty list
-[PASS] PrintReverse: empty list
-[PASS] GetNextItem: empty-list exception
-[PASS] DeleteItem / MakeEmpty: empty list
-[PASS] PutItem: empty, tail, head; sorted traversal
-Forward: A M Z 
-Reverse: Z M A
-[PASS] PrintReverse: exact reversed order
-[PASS] GetNextItem: tail wraps to head
-[PASS] ResetList: restart at head
-Z M A
-[PASS] PrintReverse preserves traversal position
-[PASS] GetItem: find head, middle, tail
-[PASS] GetItem: missing below, between, above
-[PASS] PutItem: insert between existing nodes
-[PASS] PutItem: duplicate; length is four
-[PASS] DeleteItem: remove just one duplicate
-[PASS] DeleteItem: missing values leave list unchanged
-[PASS] DeleteItem: middle; traversal safely resets
-[PASS] DeleteItem: head
-[PASS] DeleteItem: tail
-[PASS] PrintReverse: singleton
-[PASS] DeleteItem: only node
-[PASS] PutItem: all-equal circular list
-[PASS] DeleteItem: all-equal list stays circular
-[PASS] MakeEmpty: populated list and repeated call
-[PASS] PutItem: reuse after MakeEmpty
-[PASS] Destructor: populated list returns normally
-Assignment example X Y Z -> Z Y X
-[PASS] Required X Y Z example
+Reuse after clearing: 3.5 
+Expected: 3.5
 
-RESULT: 82/82 checks passed; 0 failed.
+=== char ===
+Empty length: 0 (expected 0)
+IsFull: 0 (expected 0)
+Length after inserts: 3 (expected 3)
+Forward: X Y Z 
+Expected: X Y Z
+Reverse: Z Y X
+Expected: Z Y X
+Find existing item: 1 (expected 1)
+Find missing item: 0 (expected 0)
+After ResetList: X (expected X)
+Wrap to first: X (expected X)
+Insert duplicate, delete one: X Y Z 
+Expected: X Y Z
+Delete missing, length: 3 (expected 3)
+Delete middle: X Z 
+Expected: X Z
+Delete tail: X 
+Expected: X
+Delete head: Z 
+Expected: Z
+Delete only node, length: 0 (expected 0)
+MakeEmpty length: 0 (expected 0)
+Empty reverse (blank line):
+
+Reuse after clearing: Z 
+Expected: Z
